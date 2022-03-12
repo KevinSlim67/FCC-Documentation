@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<body>
+  <nav id="navbar" class="scrollbar">
+    <header class="margin">Java Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#Why-use-java">Why Use Java ?</a>
+      </li>
+      <li><a class="nav-link" href="#Hello_World">Hello World</a></li>
+      <li><a class="nav-link" href="#Comments">Comments</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+      </li>
+      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+      <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li>
+        <a class="nav-link" href="#if...else_statement">if...else statement</a>
+      </li>
+      <li><a class="nav-link" href="#while_statement">while statement</a></li>
+      <li>
+        <a class="nav-link" href="#Function_declarations">Function declarations</a>
+      </li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <div id="top">
+      <div style="width: 20%; height: 100%">
+        <img src="https://brandslogos.com/wp-content/uploads/images/large/java-logo-1.png" />
+      </div>
+      <div id="slogan">Write once, run everywhere</div>
+    </div>
+
+    <div id="documentation">
+      <section id="Introduction" class="main-section">
+        <h2>Introduction</h2>
+        Java is a popular programming language, created in 1995. It is owned by
+        Oracle, and more than 3 billion devices run Java. <br />
+        It is used for:
+        <ul>
+          <li>Mobile applications (specially Android apps)</li>
+          <li>Desktop applications</li>
+          <li>Web applications</li>
+          <li>Web servers and application servers</li>
+          <li>Games</li>
+          <li>Database connection</li>
+          <li>And much, much more!</li>
+        </ul>
+      </section>
+
+      <section id="Why-use-java" class="main-section">
+        <h2>Why Use Java ?</h2>
+        <ul>
+          <li>
+            Java works on different platforms (Windows, Mac, Linux, Raspberry
+            Pi, etc.)
+          </li>
+          <li>
+            It is one of the most popular programming language in the world
+          </li>
+          <li>It is easy to learn and simple to use</li>
+          <li>It is open-source and free</li>
+          <li>It is secure, fast and powerful</li>
+          <li>
+            It has a huge community support (tens of millions of developers)
+          </li>
+          <li>
+            Java is an object oriented language which gives a clear structure to
+            programs and allows code to be reused, lowering development costs
+          </li>
+          <li>
+            As Java is close to C++ and C#, it makes it easy for programmers to
+            switch to Java or vice versa
+          </li>
+        </ul>
+      </section>
+
+      <section id="Hello_World" class="main-section">
+        <h2>Hello World</h2>
+        In Java, every application begins with a class name, and that class must
+        match the filename. <br />
+        <br />
+        Let's create our first Java file, called Main.java, which can be done in
+        any text editor (like Notepad). <br />
+        <br />
+        The file should contain a "Hello World" message, which is written with
+        the following code: <br />
+        <pre><code>public class Main {
+  public static void main(String[] args) { 
+    System.out.println("Hello World"); 
+  }
+}</code> </pre>
+      </section>
+
+      <section id="Comments" class="main-section">
+        <h2>Comments</h2>
+        Comments can be used to explain Java code, and to make it more readable.
+        It can also be used to prevent execution when testing alternative code.
+        <hr />
+        <h3>Single-line Comments</h3>
+        <p>
+          Single-line comments start with two forward slashes (<code>//</code>). <br>
+          Any text between <code>//</code> and the end of the line is ignored by Java (will
+          not be executed). <br>
+          This example uses a single-line comment before a line of code: <br>
+        </p>
+        <pre><code>// This is a comment
+System.out.println("Hello World");</code> </pre>
+
+        <h3>Multi-line Comments</h3>
+        <p>
+          Multi-line comments start with <code>/*</code> and ends with <code>*/</code>. <br>
+          Any text between <code>/*</code> and <code>*/</code> will be ignored by Java. <br>
+          This example uses a multi-line comment (a comment block) to explain
+          the code: <br />
+        </p>
+        <pre><code>/* The code below will print the words Hello World
+to the screen, and it is amazing */
+System.out.println("Hello World");</code></pre>
+      </section>
+
+      <section id="Variables" class="main-section">
+        <h2>Variables</h2>
+        <p>
+          Variables are containers for storing data values. <br> <br>
+          In Java, there are different types of variables, for example: <br> <br>
+          <ul>
+            <li><code>String</code> - stores text, such as "Hello". String values are surrounded by double quotes</li>
+            <li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+            <li><code>float</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+            <li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single
+            quotes</li>
+            <li><code>boolean</code> - stores values with two states: true or false</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="Declaring_variables" class="main-section">
+        <h2>Declaring  Variables</h2>
+        <p>Here is the syntax : </p>
+        <pre><code>type variableName = value;</code></pre>
+
+        <p>Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable. <br><br>
+        To create a variable that should store text, look at the following example:<br></p>
+        <pre><code>String name = "John";
+System.out.println(name);</code></pre>
+
+        <p>To create a variable that should store a number, look at the following example:<br></p>
+        <pre><code>int myNum = 15;
+System.out.println(myNum);</code></pre>
+
+        <p>You can also declare a variable without assigning the value, and assign the value later:<br></p>
+        <pre><code>int myNum;
+myNum = 15;
+System.out.println(myNum);</code></pre>
+      </section>
+
+    </div>
+  </main>
+</body>
