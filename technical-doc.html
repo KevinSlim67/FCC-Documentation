@@ -14,10 +14,11 @@
       <li><a class="nav-link" href="#Comments">Comments</a></li>
       <li><a class="nav-link" href="#Variables">Variables</a></li>
       <li>
-        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+        <a class="nav-link" href="#Declaring_variables">Declaring Variables</a>
       </li>
-      <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
-      <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+      <li><a class="nav-link" href="#Final_variables">Final Variables</a></li>
+      <li><a class="nav-link" href="#Data_types">Data Types</a></li>
+      <li><a class="nav-link" href="#Type_casting">Type Casting</a></li>
       <li><a class="nav-link" href="#Constants">Constants</a></li>
       <li><a class="nav-link" href="#Data_types">Data types</a></li>
       <li>
@@ -148,19 +149,147 @@ System.out.println("Hello World");</code></pre>
         <p>Here is the syntax : </p>
         <pre><code>type variableName = value;</code></pre>
 
-        <p>Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable. <br><br>
+        <p>Where type is one of Java's types (such as <code>int</code> or <code>String</code>), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable. <br><br>
         To create a variable that should store text, look at the following example:<br></p>
-        <pre><code>String name = "John";
-System.out.println(name);</code></pre>
+        <pre><code>String name = "John";</code></pre>
 
         <p>To create a variable that should store a number, look at the following example:<br></p>
-        <pre><code>int myNum = 15;
-System.out.println(myNum);</code></pre>
+        <pre><code>int myNum = 15;</code></pre>
 
         <p>You can also declare a variable without assigning the value, and assign the value later:<br></p>
         <pre><code>int myNum;
-myNum = 15;
-System.out.println(myNum);</code></pre>
+myNum = 15;</code></pre>
+      </section>
+
+      <section id="Final_variables" class="main-section">
+        <h2>Final Variables</h2>
+        <p>However, you can add the <code>final</code> keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "final" or "constant", which means unchangeable and read-only):<br></p>
+        <pre><code>final int myNum = 15;
+myNum = 20;  // will generate an error: cannot assign a value to a final variable</code></pre>
+      </section>
+
+      <section id="Data_types" class="main-section">
+        <h2>Data Types</h2>
+        <p>As explained in the previous chapter, a variable in Java must be a specified data type:<br></p>
+        <pre><code>int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String</code></pre>
+
+        <p>Data types are divided into two groups: </p>
+        <ul>
+          <li>Primitive data types - includes byte, short, int, long, float, double, boolean and char</li>
+          <li>Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)</li>
+        </ul>
+        <hr>
+
+        <h3>Primitive Data Types</h3>
+        <p>A primitive data type specifies the size and type of variable values, and it has no additional methods. <br> <br>
+          There are eight primitive data types in Java:</p>
+        <div class="center-x" style="margin: 20px 5px;width: 100%">
+          <table style="width: 80%; margin: 0 auto 20px auto"> <!-- Fix this part in order to make it align center-->
+            <thead>
+              <tr>
+                <th style="width: 15%">Data Type</th>
+                <th style="width: 15%">Size</th>
+                <th style="width: 70%">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="light-purple">
+                <td>byte</td>
+                <td>1 byte</td>
+                <td>Stores whole numbers from -128 to 127</td>
+              </tr>
+              <tr>
+                <td>short </td>
+                <td>2 bytes</td>
+                <td>Stores whole numbers from -32,768 to 32,767</td>
+              </tr>
+              <tr class="light-purple">
+                <td>int</td>
+                <td>4 bytes</td>
+                <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+              </tr>
+              <tr>
+                <td>long</td>
+                <td>8 bytes</td>
+                <td>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+              </tr>
+              <tr class="light-purple">
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+              </tr>
+              <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+              </tr>
+              <tr class="light-purple">
+                <td>boolean</td>
+                <td>1 bit</td>
+                <td>Stores true or false values</td>
+              </tr>
+              <tr>
+                <td>char</td>
+                <td>2 bytes</td>
+                <td>Stores a single character/letter or ASCII values</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Non-Primitive Data Types</h3>
+          <p>
+            Non-primitive data types are called reference types because they refer to objects. <br> <br>
+            The main difference between primitive and non-primitive data types are: <br>
+            <ul>
+              <li>Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for <code>String</code>).</li>
+              <li>Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.</li>
+              <li>A primitive type has always a value, while non-primitive types can be <code>null</code>.</li>
+              <li>A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.</li>
+              <li>The size of a primitive type depends on the data type, while non-primitive types have all the same size.</li>
+            </ul> <br>
+            Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter.<br>
+          </p>
+      </section>
+
+      <section id="Type_casting" class="main-section">
+        <h2>Type Casting</h2>
+        <p>Type casting is when you assign a value of one primitive data type to another type. <br> <br>
+          In Java, there are two types of casting:<br>
+          <ul>
+              <li><p>Widening Casting (automatically) - converting a smaller type to a larger type size<br>
+              <code>byte</code> -> <code>short</code> -> <code>char</code> -> <code>int</code> -> <code>long</code> -> <code>float</code> -> <code>double</code></p></li>
+          
+              <li><p>Narrowing Casting (manually) - converting a larger type to a smaller size type<br>
+              <code>double</code> -> <code>float</code> -> <code>long</code> -> <code>int</code> -> <code>char</code> -> <code>short</code> -> <code>byte</code></p></li> 
+          </ul>
+        </p> <br>
+
+        <h3>Widening Casting</h3>
+        <pre><code>public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+        
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}</code></pre>
+
+      <h3>Narrowing Casting</h3>
+      <pre><code>public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+      
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}</code></pre>
+      
       </section>
 
     </div>
